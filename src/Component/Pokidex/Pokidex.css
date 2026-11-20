@@ -1,0 +1,8 @@
+.pokidex-title{
+    display: flex;
+    letter-spacing: 1rem;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    color: #ff0000;
+}

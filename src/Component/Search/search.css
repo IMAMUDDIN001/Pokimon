@@ -1,0 +1,39 @@
+.search-form {
+    display: flex;
+    width: min(calc(100% - 2rem), 32rem);
+    margin: 1rem auto;
+    gap: 0.75rem;
+}
+
+#search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    background: #f8fafc;
+    color: #1e293b;
+    font: inherit;
+}
+
+#search-input:focus {
+    border-color: #93c5fd;
+    outline: 2px solid #bfdbfe;
+    outline-offset: 1px;
+}
+
+.search-button {
+    padding: 0.65rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    background: #f8fafc;
+    color: #1e293b;
+    cursor: pointer;
+    font: inherit;
+    transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.search-button:hover {
+    border-color: #93c5fd;
+    background: #eff6ff;
+}
