@@ -1,10 +1,12 @@
-function Pokimon({ name, url, type }) {
+import { Link } from 'react-router-dom';
+
+function Pokimon({ id, name, url, type }) {
     return (
-        <div className="pokimon">
+        <Link className="pokimon" to={`/pokemon/${id}`} aria-label={`View ${name} details`}>
             <h4>{name}</h4>
-            <img src={url} alt={name} />
+            <img src={url} alt="" />
             <p>Type: {type.map(pokemonType => pokemonType.type.name).join(', ')}</p>
-        </div>
+        </Link>
     )
 
 }

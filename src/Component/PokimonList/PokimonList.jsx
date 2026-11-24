@@ -127,6 +127,7 @@ function PokimonList({ searchTerm }) {
             {pokimonList.map(pokimon => (
                 <Pokimon
                     key={pokimon.id}
+                    id={pokimon.id}
                     name={pokimon.name}
                     url={pokimon.image}
                     type={pokimon.type}

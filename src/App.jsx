@@ -1,16 +1,10 @@
 
 import './App.css'
-import Pokidex from './Component/Pokidex/Pokidex'
-
+import PokemonRoutes from './Component/PokemonDetails/PokemonDetails'
 
 function App() {
- 
-
   return (
-    <>
-   <Pokidex />
-   
-    </>
+    <PokemonRoutes />
   )
 }
 
