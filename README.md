@@ -8,12 +8,14 @@ A React Pokédex for browsing Pokémon and searching by Pokémon name or type. P
 - Search by Pokémon name or type (for example, `Pikachu` or `fire`).
 - Search is case-insensitive and trims extra spaces.
 - View each Pokémon's name, image, and type.
+- Open a Pokémon detail page by selecting its card.
 - Use fallback artwork when a Pokémon has no Dream World sprite.
 - See an error message when a search or API request fails.
 
 ## Built With
 
 - React
+- React Router
 - Vite
 - Axios
 - CSS
@@ -53,6 +55,18 @@ Vite prints the local development URL in the terminal after the server starts.
 | `npm run preview` | Preview the production build locally. |
 | `npm run lint` | Run ESLint on the project. |
 
+## Routing
+
+The app uses React Router for client-side navigation. Selecting a Pokémon card opens its detail page without a full page reload.
+
+| Route | Page |
+| --- | --- |
+| `/` | Pokédex list and search |
+| `/pokemon/:pokemonId` | Pokémon details, loaded using the Pokémon ID |
+| Any other path | Not-found page |
+
+The route definitions and `BrowserRouter` are in `src/Component/PokemonDetails/PokemonDetails.jsx`. Pokémon cards navigate to `/pokemon/<id>`, and the detail page links back to `/`.
+
 ## Project Structure
 
 ```text
@@ -65,6 +79,9 @@ Vite prints the local development URL in the terminal after the server starts.
 │   │   ├── Pokidex/
 │   │   │   ├── Pokidex.jsx
 │   │   │   └── Pokidex.css
+│   │   ├── PokemonDetails/
+│   │   │   ├── PokemonDetails.jsx
+│   │   │   └── PokemonDetails.css
 │   │   ├── Pokimon/
 │   │   │   ├── Pokimon.jsx
 │   │   │   └── Pokimon.css
